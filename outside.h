@@ -18,6 +18,10 @@ private:
 public:
 	Outside();
 	void specialAction(Player *);
+	char menu();
+	void welcome();
+	void loseTime(Player *player, int timeLost);
+	void winTime(Player *player, int timeWon);	
 };
 #endif // !OUTSIDE_H
 

@@ -16,9 +16,14 @@ private:
 	bool hasBeen;
 	bool checkCabinet;
 	bool checkUnderSink;
-	int time;
 public:
 	BathRoom();
 	void specialAction(Player *);
+	void welcome();
+	char menu();
+	void cabinetPrompt();
+	void underSinkPrompt();
+	void loseTime(Player *player, int timeLost);
+	void winTime(Player *player, int timeWon);	
 };
 #endif // !BATHROOM_H

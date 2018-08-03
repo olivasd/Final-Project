@@ -21,6 +21,12 @@ private:
 public:
 	LivingRoom();
 	void specialAction(Player *);
+	void welcome();
+	char menu();
+	void sofaPrompt(Player *);
+	void coffeeTablePrompt(Player *);
+	void loseTime(Player *player, int timeLost);
+	void winTime(Player *player, int timeWon);	
 };
 
 #endif // LIVINGROOM_H

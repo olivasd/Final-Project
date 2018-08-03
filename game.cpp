@@ -52,8 +52,7 @@ void Game::intro()
 		<< "shower, get dressed. Check the clock, awesome you are actually 5 minutes early.\n"
 		<< "The boss will surely appreciate that. You are about to walking out the door and\n"
 		<< " oh no, the car keys are not on the key hook.\n\n"
-		<< "Objective: Find your car keys before time runs out and you are late for work.\n\n"
-		<< "FOR GRADER: THE KEYS ARE IN THE BEDROOM DRESSER\n\n";
+		<< "Objective: Find your car keys before time runs out and you are late for work.\n\n";
 }
 /*********************************************************************
 ** Function: playGame
@@ -65,17 +64,14 @@ void Game::intro()
 
 void Game::playGame()
 {
-	
-	while (player->getTime() > 0 && player->getTime() != 100)
-	{
+	while (player->getTime() > 0 && player->getTime() != 100){
 		int time = player->getTime();  //time * 3 == 1 minute
-				std::cout << "*****you have " << time / 3 << " minutes remaining*****\n"; //displays minutes left with Space changes
+		std::cout << "*****you have " << time / 3 << " minutes remaining*****\n"; //displays minutes left with Space changes
 		player->getRoom()->specialAction(player);
 	}
-	if (player->getTime() <= 0)
-	{
+	if (player->getTime() <= 0){
 		std::cout << "\nYou have run out of time.\n"
 			<< "You will no longer be able to make to work on time\n"
-			<< "*****GAME OVER*****";
+			<< "*****GAME OVER*****\n";
 	}
 }

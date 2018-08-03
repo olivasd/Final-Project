@@ -14,6 +14,19 @@ Outside::Outside()
 	room = "outside";
 }
 
+char Outside::menu(){}
+	
+void Outside::welcome(){};
+
+void Outside::loseTime(Player *player, int timeLost){
+	int time = player->getTime();
+	time -= timeLost;
+	player->setTime(time);
+}
+void Outside::winTime(Player *player, int timeLost){
+	player->setTime(100);
+}
+
 /*********************************************************************
 ** Function: specialAction
 ** Description: If the player has not reteived the key, then they are locked
@@ -25,12 +38,12 @@ void Outside::specialAction(Player *player)
 {
 	if (!player->getHasKey())
 	{
-		std::cout << "Oh no, you have locked yourself out!";
-		player->setTime(0);
+		std::cout << "Oh no, you have locked yourself out!\n";
+		loseTime(player, player->getTime());
 	}
 	else
 	{
 		std::cout << "****YOU WIN****\nYou are going to make it to work on time!\n";
-		player->setTime(100);
+		winTime(player, 100);
 	}
 }

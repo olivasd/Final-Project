@@ -41,7 +41,10 @@ public:
 	{
 		back = space;
 	};
-	virtual void specialAction(Player*) = 0;
+	virtual void loseTime(Player *player, int timeLost) = 0;
+	virtual void winTime(Player *player, int timeWon) = 0;	virtual void specialAction(Player *) = 0;
+	virtual char menu() = 0;
+	virtual void welcome() = 0;
 
 };
 #endif // !SPACE_H

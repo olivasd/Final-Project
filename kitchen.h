@@ -16,10 +16,15 @@ private:
 	bool checkCabinet;
 	bool checkFridge;
 	bool hasBeen;
-	int time;
 public:
 	Kitchen();
 	void specialAction(Player *);
+	void welcome();
+	char menu();
+	void cabinetPrompt(Player *);
+	void fridgePrompt(Player *);
+	void loseTime(Player *player, int timeLost);
+	void winTime(Player *player, int timeWon);	
 };
 #endif // !KITCHEN_H
 

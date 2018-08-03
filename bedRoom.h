@@ -13,7 +13,6 @@
 class BedRoom : public Space{
 private:
 	std::string room;
-	int time;
 	bool hasBeen;
 	bool checkCloset;
 	bool checkDresser;
@@ -21,5 +20,12 @@ private:
 public:
 	BedRoom();
 	void specialAction(Player *);
+	void welcome();
+	char menu();
+	void bedPrompt();
+	void dresserPrompt(Player *);
+	void closetPrompt();
+	void loseTime(Player *player, int timeLost);
+	void winTime(Player *player, int timeWon);	
 };
 #endif // !BEDROOM_H

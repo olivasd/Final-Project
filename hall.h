@@ -17,10 +17,14 @@ private:
 	std::string room;
 	bool hasBeen;
 	bool checkedPlant;
-	int time;
 public:
 	Hall();
 	void specialAction(Player *);
+	void welcome();
+	char menu();
+	void plantPrompt(Player *);
+	void loseTime(Player *player, int timeLost);
+	void winTime(Player *player, int timeWon);	
 };
 #endif // !HALL_H
 
